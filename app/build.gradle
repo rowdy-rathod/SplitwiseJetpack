@@ -122,4 +122,7 @@ dependencies {
     implementation "com.google.accompanist:accompanist-flowlayout:0.24.4-alpha"
 
 
+    implementation "androidx.compose.material:material-icons-extended:$compose_ui_version"
+
+
 }
