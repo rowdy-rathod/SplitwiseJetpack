@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SplitwiseJetpack</string>
+    <string name="welcome_back_to_tuj_maj">Welcome back to Tuj Maj</string>
+    <string name="label_signup">Sign up</string>
+    <string name="label_password">Password</string>
+    <string name="label_email_address">Email address</string>
+    <string name="icon_button_description">Icon description</string>
+    <string name="label_signin">Sign in</string>
+    <string name="forgot_password_label">Forgot your password?</string>
+    <string name="label_fullname">Full name</string>
+    <string name="label_phone">Phone</string>
+    <string name="label_done">Done</string>
+    <string name="label_change"><![CDATA[Change >>]]></string>
+    <string name="label_use_currency">I user %s as my currency</string>
+</resources>
