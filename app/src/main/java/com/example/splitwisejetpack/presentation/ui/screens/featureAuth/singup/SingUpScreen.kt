@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -12,6 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -24,9 +28,17 @@ import com.example.splitwisejetpack.presentation.theme.SplitwiseTheme
 @Composable
 fun SignUpScreen(navController: NavController? = null) {
 
+    var userFullName by remember { mutableStateOf("") }
+
     var userEmail by remember { mutableStateOf("") }
 
     var userPassword by remember { mutableStateOf("") }
+
+    var userPhoneNumber by remember { mutableStateOf("") }
+
+    var userSTDCode by remember { mutableStateOf("") }
+
+    var passwordVisibility by remember { mutableStateOf(false) }
 
     val context = LocalContext.current
 
@@ -67,12 +79,12 @@ fun SignUpScreen(navController: NavController? = null) {
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(top = 20.dp),
-                        value = userEmail,
-                        onValueChange = { userEmail == it },
+                        value = userFullName,
+                        onValueChange = { userFullName = it },
                         colors = if (isSystemInDarkTheme()) DarkTextFieldColor() else LightTextFieldColor(),
                         label = { Text(text = context.getString(R.string.label_fullname)) },
                         keyboardOptions = KeyboardOptions.Default.copy(
-                            keyboardType = KeyboardType.Email,
+                            keyboardType = KeyboardType.Text,
                             imeAction = ImeAction.Next
                         ),
                     )
@@ -90,8 +102,8 @@ fun SignUpScreen(navController: NavController? = null) {
                             TextField(
                                 modifier = Modifier
                                     .padding(top = 12.dp),
-                                value = userPassword,
-                                onValueChange = { userPassword == it },
+                                value = userEmail,
+                                onValueChange = { userEmail = it },
                                 colors = if (isSystemInDarkTheme()) DarkTextFieldColor() else LightTextFieldColor(),
                                 label = {
                                     Text(text = context.getString(R.string.label_email_address))
@@ -107,15 +119,26 @@ fun SignUpScreen(navController: NavController? = null) {
                                     .fillMaxWidth()
                                     .padding(top = 12.dp),
                                 value = userPassword,
-                                onValueChange = { userPassword == it },
+                                onValueChange = { userPassword = it },
                                 colors = if (isSystemInDarkTheme()) DarkTextFieldColor() else LightTextFieldColor(),
                                 label = {
                                     Text(text = context.getString(R.string.label_password))
                                 },
                                 keyboardOptions = KeyboardOptions.Default.copy(
-                                    keyboardType = KeyboardType.Password,
+                                    keyboardType = KeyboardType.Text,
                                     imeAction = ImeAction.Next
-                                )
+                                ),
+                                trailingIcon = {
+                                    val image = if (passwordVisibility)
+                                        Icons.Filled.Visibility
+                                    else Icons.Filled.VisibilityOff
+                                    IconButton(onClick = {
+                                        passwordVisibility = !passwordVisibility
+                                    }) {
+                                        Icon(image, contentDescription = "showHide")
+                                    }
+                                },
+                                visualTransformation = if (passwordVisibility) VisualTransformation.None else PasswordVisualTransformation()
 
                             )
                         }
@@ -129,8 +152,8 @@ fun SignUpScreen(navController: NavController? = null) {
                             modifier = Modifier
                                 .width(80.dp)
                                 .padding(top = 12.dp),
-                            value = userPassword,
-                            onValueChange = { userPassword == it },
+                            value = userSTDCode,
+                            onValueChange = { userSTDCode == it },
                             colors = if (isSystemInDarkTheme()) DarkTextFieldColor() else LightTextFieldColor(),
                             label = {
                                 Text(text = "+91")
@@ -144,8 +167,8 @@ fun SignUpScreen(navController: NavController? = null) {
                         TextField(
                             modifier = Modifier
                                 .padding(top = 12.dp, start = 12.dp),
-                            value = userPassword,
-                            onValueChange = { userPassword == it },
+                            value = userPhoneNumber,
+                            onValueChange = { userPhoneNumber = it },
                             colors = if (isSystemInDarkTheme()) DarkTextFieldColor() else LightTextFieldColor(),
                             label = {
                                 Text(text = context.getString(R.string.label_phone))
