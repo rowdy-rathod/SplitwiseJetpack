@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.ui.screens.featureAuth.singup
+package com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureAuth.singup
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
@@ -20,9 +20,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.splitwisejetpack.R
-import com.example.splitwisejetpack.presentation.theme.DarkTextFieldColor
-import com.example.splitwisejetpack.presentation.theme.LightTextFieldColor
-import com.example.splitwisejetpack.presentation.theme.SplitwiseTheme
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.DarkTextFieldColor
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.LightTextFieldColor
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.SplitwiseTheme
 
 @Preview(showBackground = true)
 @Composable
@@ -164,6 +164,7 @@ fun SignUpScreen(navController: NavController? = null) {
                             )
 
                         )
+
                         TextField(
                             modifier = Modifier
                                 .padding(top = 12.dp, start = 12.dp),
@@ -177,9 +178,7 @@ fun SignUpScreen(navController: NavController? = null) {
                                 keyboardType = KeyboardType.Number,
                                 imeAction = ImeAction.Done
                             )
-
                         )
-
                     }
 
                     Row(
@@ -207,9 +206,7 @@ fun SignUpScreen(navController: NavController? = null) {
                     ) {
                         Text(text = context.getString(R.string.label_done))
                     }
-
                 }
-
             }
         }
     }

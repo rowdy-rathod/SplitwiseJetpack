@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.ui
+package com.tujhe_majhe.splitwisejetpack.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

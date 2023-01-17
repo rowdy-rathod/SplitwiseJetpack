@@ -1,13 +1,13 @@
-package com.example.splitwisejetpack.presentation.ui
+package com.tujhe_majhe.splitwisejetpack.presentation.ui
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.splitwisejetpack.presentation.ui.screens.featureAuth.Auth
-import com.example.splitwisejetpack.presentation.ui.screens.featureAuth.signin.SignInScreen
-import com.example.splitwisejetpack.presentation.ui.screens.featureAuth.singup.SignUpScreen
-import com.example.splitwisejetpack.presentation.ui.screens.featureSplash.SplashScreen
+import com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureAuth.Auth
+import com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureAuth.signin.SignInScreen
+import com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureAuth.singup.SignUpScreen
+import com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureSplash.SplashScreen
 
 @Composable
 fun AppNavigationController() {
@@ -32,6 +32,4 @@ fun AppNavigationController() {
             SignInScreen(navController)
         }
     }
-
-
 }

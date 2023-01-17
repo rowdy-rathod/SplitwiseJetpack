@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.theme
+package com.tujhe_majhe.splitwisejetpack.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.Colors

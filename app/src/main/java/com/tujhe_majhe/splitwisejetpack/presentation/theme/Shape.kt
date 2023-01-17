@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.theme
+package com.tujhe_majhe.splitwisejetpack.presentation.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
