@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack
+package com.tujhe_majhe.splitwisejetpack
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.ui.screens.featureAuth.signin
+package com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureAuth.signin
 
 import android.util.Log
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -18,9 +18,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.splitwisejetpack.R
-import com.example.splitwisejetpack.presentation.theme.DarkTextFieldColor
-import com.example.splitwisejetpack.presentation.theme.LightTextFieldColor
-import com.example.splitwisejetpack.presentation.theme.SplitwiseTheme
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.DarkTextFieldColor
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.LightTextFieldColor
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.SplitwiseTheme
 
 @Preview(showBackground = true)
 @Composable
@@ -109,8 +109,6 @@ fun SignInScreen(navController: NavController? = null) = SplitwiseTheme {
                             }
                         },
                         visualTransformation = if (passwordVisibility) VisualTransformation.None else PasswordVisualTransformation()
-
-
                     )
 
                     Button(
@@ -128,13 +126,10 @@ fun SignInScreen(navController: NavController? = null) = SplitwiseTheme {
                             .padding(top = 25.dp),
                         text = context.getString(R.string.forgot_password_label)
                     )
-
                 }
-
             }
         }
     }
-
 }
 
 fun onUserLogin(text: String) {

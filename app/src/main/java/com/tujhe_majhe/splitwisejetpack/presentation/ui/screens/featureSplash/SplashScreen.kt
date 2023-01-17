@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.ui.screens.featureSplash
+package com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureSplash
 
 import android.view.animation.OvershootInterpolator
 import androidx.compose.animation.core.tween
@@ -18,10 +18,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.splitwisejetpack.BuildConfig
 import com.example.splitwisejetpack.R
-import com.example.splitwisejetpack.presentation.theme.SplitwiseTheme
-import com.example.splitwisejetpack.presentation.ui.Screens
+import com.example.splitwisejetpack.BuildConfig
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.SplitwiseTheme
+import com.tujhe_majhe.splitwisejetpack.presentation.ui.Screens
 import kotlinx.coroutines.delay
 
 @Preview(showBackground = true)
@@ -54,7 +54,6 @@ fun SplashScreen(navController: NavController? = null) {
                         // this line will be clear backstack
                         popUpTo(Screens.SplashScreen.route) { inclusive = true }
                     }
-
                 }
 
                 Image(

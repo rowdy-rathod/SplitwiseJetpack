@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.ui
+package com.tujhe_majhe.splitwisejetpack.presentation.ui
 
 sealed class Screens(val route: String) {
     object SplashScreen : Screens("splash_screen")

@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.ui.screens.featureAuth
+package com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureAuth
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.*
@@ -11,9 +11,9 @@ import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.navigation.NavController
 import com.example.splitwisejetpack.R
-import com.example.splitwisejetpack.presentation.theme.SplitwiseTheme
-import com.example.splitwisejetpack.presentation.theme.colorSurfaceVariant
-import com.example.splitwisejetpack.presentation.ui.Screens
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.SplitwiseTheme
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.colorSurfaceVariant
+import com.tujhe_majhe.splitwisejetpack.presentation.ui.Screens
 
 @Composable
 fun Auth(navController: NavController) {
@@ -61,6 +61,7 @@ fun Buttons(navController: NavController, modifier: Modifier) {
             ) {
                 Text(text = context.getString(R.string.label_signup))
             }
+
             OutlinedButton(
                 elevation = ButtonDefaults.elevation(
                     defaultElevation = 0.dp,
@@ -76,7 +77,6 @@ fun Buttons(navController: NavController, modifier: Modifier) {
             ) {
                 Text(text = context.getString(R.string.label_signin))
             }
-
         }
     }
 }

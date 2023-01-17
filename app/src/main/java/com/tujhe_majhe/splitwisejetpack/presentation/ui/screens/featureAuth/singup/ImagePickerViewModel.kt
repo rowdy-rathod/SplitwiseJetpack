@@ -1,4 +1,4 @@
-package com.example.splitwisejetpack.presentation.ui.screens.featureAuth.singup
+package com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureAuth.singup
 
 import androidx.lifecycle.ViewModel
 import javax.inject.Inject

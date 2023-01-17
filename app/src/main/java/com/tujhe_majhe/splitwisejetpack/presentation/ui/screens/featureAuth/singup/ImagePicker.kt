@@ -1,11 +1,10 @@
-package com.example.splitwisejetpack.presentation.ui.screens.featureAuth.singup
+package com.tujhe_majhe.splitwisejetpack.presentation.ui.screens.featureAuth.singup
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.Surface
@@ -20,8 +19,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.tujhe_majhe.splitwisejetpack.presentation.theme.SplitwiseTheme
 import com.example.splitwisejetpack.R
-import com.example.splitwisejetpack.presentation.theme.SplitwiseTheme
 
 @Preview(showBackground = true)
 @Composable
@@ -35,7 +34,6 @@ fun ImagePickerForSignUp() {
                 modifier = Modifier.width(100.dp),
                 elevation = 1.dp
             ) {
-
                 Box(modifier = Modifier.height(120.dp)) {
                     Image(
                         modifier = Modifier
@@ -44,7 +42,6 @@ fun ImagePickerForSignUp() {
                         painter = painterResource(id = R.drawable.no_profile),
                         contentDescription = context.getString(R.string.icon_button_description)
                     )
-
 
                     Box(
                         modifier = Modifier
@@ -78,7 +75,6 @@ fun ImagePickerForSignUp() {
                         }
                     }
                 }
-
             }
         }
     }
