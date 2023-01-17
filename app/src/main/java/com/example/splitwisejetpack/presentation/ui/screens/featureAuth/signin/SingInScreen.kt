@@ -126,9 +126,7 @@ fun SignInScreen(navController: NavController? = null) = SplitwiseTheme {
 }
 
 fun onUserLogin(text: String) {
-
     Log.e("User Email=>", text)
-
 }
 
 
